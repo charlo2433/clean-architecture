@@ -25,12 +25,15 @@ class TodoViewModel @Inject constructor(private val todoUseCase: TodoUseCase): V
 
     private fun getTodo(){
         todoUseCase().onEach {result->
-            when(result){
-                is ApiResource.Failure -> _state.value = Todostate(error = result.errorBody.toString())
-                ApiResource.Loading -> _state.value = Todostate(isLoading = true)
-                is ApiResource.Success-> {
+            when (result) {
+                is ApiResource.Failure -> _state.value =
+                    Todostate(error = result.errorBody.toString())
 
-                    _state.value = result.value?.let { Todostate(todoList = it) }!!}
+                ApiResource.Loading -> _state.value = Todostate(isLoading = true)
+                is ApiResource.Success -> {
+
+                    _state.value = result.value?.let { Todostate(todoList = it) }!!
+                }
             }
 
         }.launchIn(viewModelScope)

@@ -1,4 +1,4 @@
-package com.zazu.mvvmjetflow.presentation.theme
+package com.zazu.mvvmjetflow.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

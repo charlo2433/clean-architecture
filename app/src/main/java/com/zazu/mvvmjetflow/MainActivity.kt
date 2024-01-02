@@ -31,7 +31,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.zazu.mvvmjetflow.presentation.theme.MvvmJetFlowTheme
+import com.zazu.mvvmjetflow.ui.theme.MvvmJetFlowTheme
 import com.zazu.mvvmjetflow.presentation.todo_list.TodoScreen
 import com.zazu.mvvmjetflow.presentation.view_model.TodoViewModel
 import dagger.hilt.android.AndroidEntryPoint
